@@ -11,13 +11,13 @@ d: bool = b == 0 and c == 0
 e: bool = b == 0
 f: bool = c == 0
 
-if  d == True: 
+if d is True: 
     print("TAR HEELS")
 else:
-    if f == True:
+    if f is True:
         print("HEELS")
     else:
-        if e == True:
+        if e is True:
             print("TAR")
         else:
             print("CAROLINA")
