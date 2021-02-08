@@ -19,15 +19,15 @@ how_much: int = int(randint(1, 4))
 print("Your fortune cookie says...")
 
 if how_much == 1:
-        print("A beautiful, smart, and loving person will be coming into you life.")       
+    print("A beautiful, smart, and loving person will be coming into you life.")       
 else:
     if how_much == 2:
-            print("Your life will be happy and peaceful.")
+        print("Your life will be happy and peaceful.")
     else:
         if how_much == 3:
-                print("Soon life will become more interesting.")
+            print("Soon life will become more interesting.")
         else:
-                print("When the sun is dark, you will experience brightness.")
+            print("When the sun is dark, you will experience brightness.")
 
 
-print("Now, go spread postivie vibes!")
+print("Now, go spread positive vibes!")
