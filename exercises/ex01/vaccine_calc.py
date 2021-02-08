@@ -25,15 +25,19 @@ target_percent: int = int(input("Target percent vaccinated: "))
 
 percent_target: float = target_percent / 100
 already_vac: float = doses_admin / 2
+already_vac_: int = int(already_vac)
 pop_vac_per_day: float = doses_per_day / 2
-percent_pop: float = pop * percent_target
-pop_needs_vac: float = percent_pop - already_vac
-days_until_target: float = (target_percent-pop_needs_vac) / pop_vac_per_day
+un_vac: float = pop * percent_target
+un_vac_: int = int(un_vac)
+pop_needs_vac: int = un_vac_ - already_vac_
+days_until: int = int(pop_needs_vac / pop_vac_per_day)
+
+
 
 
 today: datetime = datetime.today()
-future_day: timedelta = timedelta(days_until_target)
+future_day: timedelta = timedelta(days_until)
 vaccination_met: datetime = today + future_day
 
 
-print("We will reach " +  str(target_percent) + "% vaccination in " +  str(days_until_target) + " " + "days, which falls on" + " " + (vaccination_met.strftime("%B %d, %Y")) + ".")
+print("We will reach" + " " + str(target_percent) + "% vaccination in" + " " + str(days_until) + " " + "days, which falls on" + " " + (vaccination_met.strftime("%B %d, %Y")) + ".")
