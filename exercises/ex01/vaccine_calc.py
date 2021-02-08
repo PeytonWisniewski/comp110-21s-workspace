@@ -25,14 +25,10 @@ target_percent: int = int(input("Target percent vaccinated: "))
 
 percent_target: float = target_percent / 100
 already_vac: float = doses_admin / 2
-already_vac_: int = int(already_vac)
 pop_vac_per_day: float = doses_per_day / 2
 un_vac: float = pop * percent_target
-un_vac_: int = int(un_vac)
-pop_needs_vac: int = un_vac_ - already_vac_
-days_until: int = int(pop_needs_vac / pop_vac_per_day)
-
-
+pop_needs_vac: float = un_vac - already_vac
+days_until: int = round(pop_needs_vac / pop_vac_per_day)
 
 
 today: datetime = datetime.today()
