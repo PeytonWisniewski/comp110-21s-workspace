@@ -2,17 +2,30 @@
 
 from random import randint
 
-__author__ = "YOUR 9-DIGIT PID"
+__author__ = "730246281"
 
 
 def main() -> None:
     """The entrypoint of the program, when run as a module."""
     print("Your fortune cookie says...")
-    # TODO 2: Print the result of calling your fortune_cookie function.
+    print(fortune_cookie())
     print("Now, go spread positive vibes!")
 
 
-# TODO 1: Define your fortune_cookie function here.
+def fortune_cookie() -> str:
+    how_much: int = int(randint(1,4))
+    if how_much == 1:
+        return("Have a wonderful day")     
+    else:
+        if how_much == 2:
+            return("You're mighty wise")
+        else:
+            if how_much == 3:
+                return("The sun may rise based where you are")
+            else:
+                return("Your birthday comes once a year, don't forget")
+
+
 
 
 # Python Idiom for "starting" the program when run as a module.
